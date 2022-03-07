@@ -69,7 +69,7 @@ void main (){
             break;
             case 4: exit(0);
             break;
-            default: printf("\nEnter valid choice??\n");
+            default: printf("\nEnter valid choice?\n");
         }
     }
 }
