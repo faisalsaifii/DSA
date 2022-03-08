@@ -3,13 +3,14 @@ void main(){
     int a[20], i, n, j, temp;
     printf("Enter value of n : ");
     scanf("%d", &n);
+    printf("Enter %d integers : ",n);
     for(i=0; i<n; i++){
-        printf("Enter element for a[%d] : ", i);
         scanf("%d", &a[i]);
     }
-    printf("Before sorting the elements in the array are\n");
+    printf("Before sorting : ");
     for(j=0; j<n; j++)
-        printf("Value of a[%d] = %d\n", j, a[j]);
+        printf("%d ", a[j]);
+    printf("\n");
     int key;
     for(i=1; i<n; i++){
         key = a[i];
@@ -20,7 +21,8 @@ void main(){
         }
         a[j+1] = key;
     }
-    printf("After sorting the elements in the array are\n");
+    printf("After sorting : ");
     for(i=0; i<n; i++)
-        printf("Value of a[%d] = %d\n", i, a[i]);
+        printf("%d ", a[i]);
+    printf("\n");
 }

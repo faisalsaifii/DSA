@@ -42,5 +42,5 @@ void main(){
     if(temp == -1)
         printf("The Key element %d is not found in the array\n", k_r);
     else
-        printf("The Key element %d is found at the position %d\n", k_r, temp);
+        printf("The Key element %d is found at the position a[%d]\n", k_r, temp);
 }
