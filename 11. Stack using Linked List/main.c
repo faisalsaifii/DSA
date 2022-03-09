@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct Node{
     int data;
     struct Node* next;
 };
+
 struct Node* head = NULL;
-void push(int ele)
-{
+
+void push(int ele){
     struct Node* kri = (struct Node*)malloc(sizeof(struct Node));
     kri->data = ele;
     if(head == NULL)
@@ -16,14 +18,13 @@ void push(int ele)
     head = kri;
     printf("Successfully pushed.\n");
 }
-void pop()
-{
-if(head == NULL)
-    printf("Stack is underflow.\n");
-else{
-    printf("Popped value = %d\n", head->data);
-    head = head->next;
-}
+void pop(){
+    if(head == NULL)
+        printf("Stack is underflow.\n");
+    else{
+        printf("Popped value = %d\n", head->data);
+        head = head->next;
+    }
 }
 void display(){
     struct Node* shna= head;
@@ -54,7 +55,8 @@ void main(){
     int op, x;
     while(1)
     {
-        printf("1.Push 2.Pop 3.Display 4.Is Empty 5.Peek 6.Exit\n");printf("Enter your option : ");
+        printf("1.Push\n2.Pop\n3.Display\n4.Is Empty\n5.Peek\n6.Exit\n");
+        printf("Enter your option : ");
         scanf("%d", &op);
         switch(op)
         {
@@ -78,5 +80,5 @@ void main(){
             case 6:
                 exit(0);
         }
-        }
+    }
 }
